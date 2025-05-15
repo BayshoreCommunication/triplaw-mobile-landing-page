@@ -11,7 +11,7 @@ const ImmigrationPartner = () => {
       ></Image>
       <div>
         <div className="container mx-auto px-4 py-8">
-          <div className="grid grid-cols-2  gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2  gap-6">
             {/* <!-- Family Immigration Card --> */}
             <div>
               <div>

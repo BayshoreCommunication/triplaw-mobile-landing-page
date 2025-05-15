@@ -1,10 +1,20 @@
 "use client";
 import emailjs from "emailjs-com";
 import { useRef, useState } from "react";
+import { PiDiamondsFourBold } from "react-icons/pi";
 
 import Swal from "sweetalert2";
+import DatePickerInputField from "../shared/DatePickerInputField";
+import DropdownInputField from "../shared/DropdownInputField";
 
 const InfoFormSection = () => {
+  const [selectedValue, setSelectedValue] = useState("");
+
+  const options = [
+    { label: "Option 1", value: "option_1" },
+    { label: "Option 2", value: "option_2" },
+    { label: "Option 3", value: "option_3" },
+  ];
   const formRef = useRef(null);
   const [formData, setFormData] = useState({
     name: "",
@@ -68,37 +78,91 @@ const InfoFormSection = () => {
         });
       });
   };
+
+  const handleDateChange = (dateString) => {
+    setFormData((prev) => ({
+      ...prev,
+      date: dateString,
+    }));
+  };
+
   return (
     <div>
       <div className="w-full">
         <div className="bg-white py-8 md:py-14 px-4 md:px-8 rounded-2xl">
           <div className="">
-            <h2 className="text-[26px] md:text-[30px] font-semibold text-gray-800 text-center leading-tight">
+            {/* <LuNotebook className="text-gray-900 size-9" /> */}
+            <h2 className="text-[26px] md:text-[30px] font-semibold text-gray-800 leading-tight">
               Fill Out the Case Info Form Below
             </h2>
           </div>
-          <form ref={formRef} onSubmit={handleSubmit}>
-            <div className="w-full mt-6">
+          <p>
+            Save time by filling out the form before arriving. Uploading
+            documents is optional but highly encouraged.
+          </p>
+          <form ref={formRef} onSubmit={handleSubmit} className="mt-8">
+            <div className="flex items-center space-x-1">
+              <PiDiamondsFourBold className="text-gray-900 size-6" />
+              <h2 className="text-[28px] font-semibold text-gray-800 leading-tight">
+                Personal Immigration
+              </h2>
+            </div>
+            <div className="w-full mt-5">
+              <label className="">Full Name</label>
               <input
                 type="text"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                className="bg-white border border-gray-300 text-lg rounded-lg focus:ring-primary focus:border-primary block w-full pl-4 py-2 placeholder-gray-400 outline-none"
-                placeholder="Your full name"
+                className="bg-white border border-gray-300 text-lg rounded-lg focus:ring-primary focus:border-primary block w-full pl-4 py-2 placeholder-gray-400 outline-none mt-2"
+                placeholder="Enter Full Name"
                 required
               />
             </div>
 
             <div className="w-full mt-5">
+              <label className="">Email </label>
               <input
-                type="email"
-                name="email"
-                value={formData.email}
+                type="text"
+                name="name"
+                value={formData.name}
                 onChange={handleChange}
-                className="bg-white border border-gray-300 text-lg rounded-lg focus:ring-primary focus:border-primary block w-full pl-4 py-2 placeholder-gray-400 outline-none"
-                placeholder="Your email"
+                className="bg-white border border-gray-300 text-lg rounded-lg focus:ring-primary focus:border-primary block w-full pl-4 py-2 placeholder-gray-400 outline-none mt-2"
+                placeholder="Enter Email Address"
                 required
+              />
+            </div>
+
+            <div className="w-full mt-5">
+              <label className="">Phone Number </label>
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                className="bg-white border border-gray-300 text-lg rounded-lg focus:ring-primary focus:border-primary block w-full pl-4 py-2 placeholder-gray-400 outline-none mt-2"
+                placeholder="+911 123456789"
+                required
+              />
+            </div>
+
+            <div className="w-full mt-5">
+              <label className="">Email </label>
+              <DatePickerInputField
+                id="basicInformation.dateOfBirth"
+                name="basicInformation.dateOfBirth"
+                value={formData?.date}
+                onChange={handleDateChange}
+                placeholder="Select birth date"
+              />
+            </div>
+
+            <div className="w-full mt-5">
+              <label className="">Country of Citizenship </label>
+              <DropdownInputField
+                options={options}
+                value={selectedValue}
+                onChange={setSelectedValue}
               />
             </div>
 

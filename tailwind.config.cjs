@@ -1,17 +1,8 @@
-import { nextui } from "@nextui-org/react";
+const withMT = require("@material-tailwind/react/utils/withMT");
+const { nextui } = require("@nextui-org/react");
 
 /** @type {import('tailwindcss').Config} */
-const withMT = require("@material-tailwind/react/utils/withMT");
-
 module.exports = withMT({
-  content: ["./pages/**/*.{js,ts,jsx,tsx}"],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-});
-
-module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -26,21 +17,24 @@ module.exports = {
         pblack: "#232222",
         pwhite: "#F1F1F1",
       },
+      maxWidth: {
+        screenMobile: "640px", // Use this in your layout
+      },
     },
     container: {
       center: true,
       padding: {
-        DEFAULT: "1rem",
-        sm: "2rem",
-        lg: "4rem",
-        xl: "5rem",
-        "2xl": "1rem",
+        DEFAULT: "1rem", // Padding for all screens
       },
     },
-    maxWidth: {
-      "2xl": "1536px", // The default value for 2xl in Tailwind CSS
+    screens: {
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
     },
   },
   darkMode: "class",
   plugins: [nextui()],
-};
+});

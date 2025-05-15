@@ -1,20 +1,10 @@
-import AboutSection from "@/components/home/AboutSection";
-import CanHelpYou from "@/components/home/CanHelpYou";
-import ContactUs from "@/components/home/ContactUs";
-import FindOurLocation from "@/components/home/FindOurLocation";
 import HeroSection from "@/components/home/HeroSection";
-import LatestBlogs from "@/components/home/LatestBlogs";
-import OurKeyOfferings from "@/components/home/OurKeyOfferings";
-import OurTechnologies from "@/components/home/OurTechnologies";
-import SpinalMedical from "@/components/home/SpinalMedical";
-import SpinalMedicalCenter from "@/components/home/SpinalMedicalCenter";
-import SummarySection from "@/components/home/SummarySection";
-import WhatPeopleSay from "@/components/home/WhatPeopleSay";
-import GoogleMap from "@/components/shared/GoogleMap";
 
 export const metadata = {
-  title: `Hess Spinal & Medical Centers: Car Accident Injury Clinic`,
-  description: `Multi-Disciplinary. Hess offers on site digital X-rays, physical therapy, chiropractic care, trigger point injections and medical evaluations at each location.`,
+  title:
+    " Best immigration lawyer lakeland,Florida | Green Card, Visa & Citizenship Attorneys",
+  description:
+    "Trip Law is a trusted immigration law firm dedicated to helping clients secure Green Cards, family sponsorships, employment visas (H-1B, L-1, EB-1, EB-2), and asylum.Our experienced Florida attorneys provide personalized legal support to guide you through every step of your U.S. immigration journey.",
   alternates: {
     canonical: "/",
     languages: {
@@ -28,24 +18,8 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main className="w-full">
+    <main className="max-w-screenMobile mx-auto">
       <HeroSection />
-      <AboutSection />
-      <SummarySection />
-      <SpinalMedicalCenter />
-      <OurKeyOfferings />
-      <CanHelpYou />
-      <SpinalMedical />
-      {/* Abu design part */}
-
-      <FindOurLocation />
-      {/* <FindOurLocation /> */}
-      {/* <TestimonialSlideSection /> */}
-      <OurTechnologies />
-      <WhatPeopleSay />
-      <LatestBlogs />
-      <GoogleMap />
-      <ContactUs />
     </main>
   );
 }

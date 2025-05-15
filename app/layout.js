@@ -1,5 +1,3 @@
-import Footer from "@/components/Footer";
-import MainNavbar from "@/components/MainNavbar";
 import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
@@ -20,9 +18,7 @@ export default function RootLayout({ children }) {
       <body className={open_sans.className}>
         <Providers>
           <div className="overflow-x-hidden text-black bg-white">
-            <MainNavbar />
             {children}
-            <Footer />
           </div>
         </Providers>
       </body>

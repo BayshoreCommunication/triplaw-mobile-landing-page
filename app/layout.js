@@ -7,7 +7,7 @@ const open_sans = Open_Sans({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://trip-law.com"),
+  metadataBase: new URL("https://event.trip-law.com"),
 };
 
 export default function RootLayout({ children }) {

@@ -1,8 +1,3 @@
-import GoogleMapSection from "@/components/about-us/GoogleMapSection";
-import ContactHeroSection from "@/components/contact-us/ContactHeroSection";
-import FAQ from "@/components/contact-us/FAQ";
-import PageHeroSection from "@/components/shared/PageHeroSection";
-
 export const metadata = {
   title: ``,
   description: ``,
@@ -18,18 +13,7 @@ export const metadata = {
 };
 
 const page = () => {
-  return (
-    <>
-      <PageHeroSection
-        image={"/assets/shared/aboutpage.jpg"}
-        title={"Contact Us"}
-        link={"contact us"}
-      />
-      <ContactHeroSection />
-      <GoogleMapSection />
-      <FAQ />
-    </>
-  );
+  return <></>;
 };
 
 export default page;

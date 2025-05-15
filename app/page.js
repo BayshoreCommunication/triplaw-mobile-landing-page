@@ -1,14 +1,11 @@
-import HeroSection from "@/components/home/HeroSection";
-
 export const metadata = {
-  title:
-    " Best immigration lawyer lakeland,Florida | Green Card, Visa & Citizenship Attorneys",
+  title: "Trip Law | Outstanding Immigration Representation",
   description:
-    "Trip Law is a trusted immigration law firm dedicated to helping clients secure Green Cards, family sponsorships, employment visas (H-1B, L-1, EB-1, EB-2), and asylum.Our experienced Florida attorneys provide personalized legal support to guide you through every step of your U.S. immigration journey.",
+    "Trip Law is dedicated to providing outstanding immigration representation with a deep commitment to humanity.",
   alternates: {
     canonical: "/",
     languages: {
-      "en-US": "/en-USA",
+      "en-US": "/en-US",
     },
   },
   openGraph: {
@@ -18,8 +15,8 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main className="max-w-screenMobile mx-auto">
-      <HeroSection />
+    <main className="max-w-screen-md mx-auto px-4">
+      <HomePageHeroSection />
     </main>
   );
 }

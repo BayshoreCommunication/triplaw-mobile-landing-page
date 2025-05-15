@@ -1,4 +1,4 @@
-import InfoFormSection from "@/components/InfoForm/InfoFormSection";
+import InfoFormSection from "../../components/InfoForm/InfoFormSection";
 
 const page = () => {
   return (

@@ -30,7 +30,7 @@
     "react-use-measure": "^2.1.1",
     "resize-observer-polyfill": "^1.5.1",
     "styled-components": "^6.1.8",
-    "sweetalert2": "^11.21.0",
+    "sweetalert2": "^11.6.13",
     "swiper": "^11.1.14"
   },
   "devDependencies": {

@@ -12,7 +12,7 @@ const InputCheckboxField = ({ name, options, selected, setFormData }) => {
     <div className="space-y-2">
       <div className="flex gap-4 mt-4">
         {options.map((option) => (
-          <label
+          <lab
             key={option.value}
             className={`flex items-center gap-2 px-4 py-2 border rounded-lg cursor-pointer transition
               ${
@@ -31,7 +31,7 @@ const InputCheckboxField = ({ name, options, selected, setFormData }) => {
               className="form-radio text-[#1D3557] focus:ring-0"
             />
             <span className="text-sm font-medium">{option.label}</span>
-          </label>
+          </lab>
         ))}
       </div>
     </div>

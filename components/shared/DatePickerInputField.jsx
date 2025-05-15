@@ -53,17 +53,30 @@ const DatePickerInputField = ({
         <input
           id={id}
           type="date"
-          className={`${
+          className={`w-full ${
             isFocused ? "border-primary" : "border-gray-300"
-          } bg-[#ffffff] border  text-lg rounded-lg focus:ring-primary focus:border-primary block w-full pl-4 py-2 placeholder-gray-400 active:border-primary outline-none pr-3`}
+          } bg-white border text-lg rounded-lg focus:ring-primary focus:border-primary block pl-4 py-2 placeholder-gray-400 active:border-primary outline-none`}
           placeholder={placeholder}
           name={name}
           value={formattedDate}
           onChange={handleChange}
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
+          style={{
+            // Hide native calendar icon for Chrome, Firefox, Edge
+            appearance: "none",
+            MozAppearance: "textfield",
+          }}
         />
       </div>
+
+      <style jsx>{`
+        /* Hide calendar icon in Chrome */
+        input[type="date"]::-webkit-calendar-picker-indicator {
+          display: none;
+          -webkit-appearance: none;
+        }
+      `}</style>
     </div>
   );
 };

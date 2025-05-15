@@ -3,15 +3,19 @@ import { useState } from "react";
 import { TiArrowSortedDown } from "react-icons/ti";
 
 const DropdownInputField = ({
+  name, // ✅ Field name for formData
   options,
-  value,
-  onChange,
+  setFormData,
+  formData,
   placeholder = "Select an option",
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleSelect = (selectedValue) => {
-    onChange(selectedValue);
+    setFormData((prev) => ({
+      ...prev,
+      [name]: selectedValue, // ✅ Set dynamic key
+    }));
     setIsOpen(false);
   };
 
@@ -21,10 +25,10 @@ const DropdownInputField = ({
         <button
           type="button"
           onClick={() => setIsOpen(!isOpen)}
-          className="flex items-center justify-between w-full bg-white border border-gray-300 rounded-lg px-4 py-2 text-left text-gray-800 focus:outline-none  focus:ring-primary focus:border-primary pl-4  placeholder-gray-400 outline-none"
+          className="flex items-center justify-between w-full bg-white border border-gray-300 rounded-lg px-4 py-2 text-left text-gray-800 focus:outline-none focus:ring-primary focus:border-primary placeholder-gray-400 outline-none"
         >
-          {value
-            ? options.find((opt) => opt.value === value)?.label
+          {formData?.[name]
+            ? options.find((opt) => opt.value === formData[name])?.label
             : placeholder}
           <TiArrowSortedDown className="text-gray-800 size-5" />
         </button>

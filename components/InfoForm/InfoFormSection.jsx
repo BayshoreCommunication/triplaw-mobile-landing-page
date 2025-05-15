@@ -41,7 +41,7 @@ const InfoFormSection = () => {
     name: "",
     email: "",
     phone: "",
-    dateofBirth: "",
+    dateofBirth: "June 14, 2025",
     countryofCitizenship: "",
     currentUSImmigrationStatus: "",
     howlonghaveyoubeenintheUS: "",

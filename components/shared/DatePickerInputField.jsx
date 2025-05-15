@@ -55,7 +55,7 @@ const DatePickerInputField = ({
           type="date"
           className={`w-full ${
             isFocused ? "border-primary" : "border-gray-300"
-          } bg-white border text-lg rounded-lg focus:ring-primary focus:border-primary block pl-4 py-2 placeholder-gray-400 active:border-primary outline-none`}
+          } bg-white border text-lg rounded-lg focus:ring-primary focus:border-primary block pl-4 py-2 placeholder-gray-400 active:border-primary outline-none h-[45px]`}
           placeholder={placeholder}
           name={name}
           value={formattedDate}

@@ -7,9 +7,7 @@ const open_sans = Open_Sans({
 });
 
 export const metadata = {
-  metadataBase: new URL(
-    "https://hessspinalandmedicalcenters-website.vercel.app"
-  ),
+  metadataBase: new URL("https://trip-law.com"),
 };
 
 export default function RootLayout({ children }) {

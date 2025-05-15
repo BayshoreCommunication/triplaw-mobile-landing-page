@@ -40,7 +40,7 @@ const FreeImmigrationClinic = () => {
           <div className="w-full">
             <Link
               href="/info-form"
-              className="block w-full text-[16px] text-white font-semibold py-4 px-6 bg-[#060B28] text-center rounded-md"
+              className="block block overflow-hidden text-white font-normal text-md md:text-lg bg-[#060B28] px-8 md:px-20 py-3 rounded-lg hover:bg-[#060b28d3] cursor-pointer w-full text-center"
             >
               Fill Out The Form
             </Link>

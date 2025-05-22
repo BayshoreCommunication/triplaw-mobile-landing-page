@@ -1,84 +1,35 @@
-"use client";
+// components/shared/DatePickerInputField.jsx
+import React, { useState } from "react";
+import DatePicker from "react-datepicker";
+import { CalendarIcon } from "lucide-react";
 
-import { useMemo, useState } from "react";
+import "react-datepicker/dist/react-datepicker.css";
 
-const DatePickerInputField = ({
-  value,
-  onChange,
-  name,
-  id,
-  placeholder = "Select date",
-  label,
-  required = false,
-}) => {
-  const [isFocused, setIsFocused] = useState(false);
-
-  const formattedDate = useMemo(() => {
-    if (!value) return "";
-    try {
-      const date = new Date(value);
-      if (isNaN(date.getTime())) return "";
-      return date.toISOString().split("T")[0];
-    } catch {
-      return "";
-    }
-  }, [value]);
-
-  const handleChange = (e) => {
-    const dateValue = e.target.value;
-    if (!dateValue) {
-      onChange("");
-      return;
-    }
-
-    // Convert to desired format: "July 15, 2025"
-    const formattedDate = new Date(dateValue).toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    });
-
-    onChange(formattedDate);
-  };
+export default function DatePickerInputField() {
+  const [selectedDate, setSelectedDate] = useState(null);
 
   return (
-    <div className="w-full space-y-1">
-      {label && (
-        <label htmlFor={id} className="block text-sm font-medium text-gray-700">
-          {label}
-          {required && <span className="text-red-500 ml-1">*</span>}
-        </label>
-      )}
-      <div className="relative">
-        <input
-          id={id}
-          type="date"
-          className={`w-full ${
-            isFocused ? "border-primary" : "border-gray-300"
-          } bg-white border text-lg rounded-lg focus:ring-primary focus:border-primary block pl-4 py-2 placeholder-gray-400 active:border-primary outline-none h-[45px]`}
-          placeholder={placeholder}
-          name={name}
-          value={formattedDate}
-          onChange={handleChange}
-          onFocus={() => setIsFocused(true)}
-          onBlur={() => setIsFocused(false)}
-          style={{
-            // Hide native calendar icon for Chrome, Firefox, Edge
-            appearance: "none",
-            MozAppearance: "textfield",
-          }}
+    <div className="relative w-full">
+      <div className="flex justify-between items-center w-full bg-white border border-gray-300 text-lg rounded-lg focus:ring-primary focus:border-primary  pl-4 py-2 placeholder-gray-400 outline-none mt-2">
+        <DatePicker
+          selected={selectedDate}
+          onChange={(date) => setSelectedDate(date)}
+          dateFormat="MM/dd/yyyy"
+          placeholderText="Date"
+          className="w-full outline-none bg-transparent text-gray-400 min-w-96"
+          calendarClassName="text-gray-100 rounded-lg shadow-lg border border-gray-700 !p-4"
+          popperClassName="z-50"
+          weekDayClassName={() => "text-gray-400"}
         />
+
+        <CalendarIcon className="w-5 h-5 text-gray-500 mr-3" />
       </div>
 
-      <style jsx>{`
-        /* Hide calendar icon in Chrome */
-        input[type="date"]::-webkit-calendar-picker-indicator {
-          display: none;
-          -webkit-appearance: none;
+      <style jsx global>{`
+        .react-datepicker__header {
+          background-color: transparent !important;
         }
       `}</style>
     </div>
   );
-};
-
-export default DatePickerInputField;
+}

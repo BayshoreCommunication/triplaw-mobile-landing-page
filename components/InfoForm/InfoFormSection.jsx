@@ -12,15 +12,39 @@ import ImageUploadInputField from "../shared/ImageUploadInputField";
 import InputCheckboxField from "../shared/InputCheckboxField";
 
 const citizenList = [
-  { label: "Green Card Holder", value: "Green Card Holder" },
-  { label: "Undocumented", value: "Undocumented" },
-  { label: "F-1", value: "F-1" },
-  { label: "H-1B", value: "H-1B" },
-  { label: "B1/B2", value: "B1/B2" },
-  { label: "Asylum Seeker", value: "Asylum Seeker" },
-  { label: "TPS", value: "TPS" },
-  { label: "DACA", value: "DACA" },
-  { label: "Other", value: "Other" },
+  {
+    label: "Green Card Through Marriage",
+    value: "Green Card Through Marriage",
+  },
+  {
+    label: "Green Card Through Immediate Relative",
+    value: "Green Card Through Immediate Relative",
+  },
+  {
+    label: "Green Card Through Consular Processing",
+    value: "Green Card Through Consular Processing",
+  },
+  { label: "H1B Visa", value: "H1B Visa" },
+  { label: "L-1 Visa", value: "L-1 Visa" },
+  { label: "O-1 Visa", value: "O-1 Visa" },
+  { label: "EB-1 Visa", value: "EB-1 Visa" },
+  { label: "EB-2 Visa", value: "EB-2 Visa" },
+  { label: "EB-3 Visa", value: "EB-3 Visa" },
+  { label: "VAWA", value: "VAWA" },
+  { label: "U Visa", value: "U Visa" },
+  { label: "Asylum", value: "Asylum" },
+  { label: "T Visa", value: "T Visa" },
+  { label: "Bond Hearing", value: "Bond Hearing" },
+  { label: "Master Calendar Hearing", value: "Master Calendar Hearing" },
+  { label: "Individual Hearing", value: "Individual Hearing" },
+  { label: "Waivers", value: "Waivers" },
+  { label: "E2 Treaty Visas", value: "E2 Treaty Visas" },
+  { label: "Citizenship", value: "Citizenship" },
+  {
+    label: "Naturalization & Citizenship",
+    value: "Naturalization & Citizenship",
+  },
+  { label: "Green Card", value: "Green Card" },
 ];
 
 const seekingList = [
@@ -193,20 +217,21 @@ const InfoFormSection = () => {
                 value={formData.phone}
                 onChange={handleChange}
                 className="bg-white border border-gray-300 text-lg rounded-lg focus:ring-primary focus:border-primary block w-full pl-4 py-2 placeholder-gray-400 outline-none mt-2"
-                placeholder="+911 123456789"
+                placeholder="Enter Phone Number"
                 required
               />
             </div>
 
             <div className="w-full mt-5">
               <label className="">Date of Birth</label>
-              <DatePickerInputField
+              {/* <DatePickerInputField
                 id="basicInformation.dateOfBirth"
                 name="basicInformation.dateOfBirth"
                 value={formData?.dateofBirth}
                 onChange={handleDateChange}
                 placeholder="Select birth date"
-              />
+              /> */}
+              <DatePickerInputField />
             </div>
 
             <div className="w-full mt-5">

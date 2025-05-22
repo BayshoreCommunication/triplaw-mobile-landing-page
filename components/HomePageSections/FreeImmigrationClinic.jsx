@@ -1,5 +1,4 @@
 import Link from "next/link";
-import React from "react";
 
 const FreeImmigrationClinic = () => {
   return (
@@ -11,7 +10,7 @@ const FreeImmigrationClinic = () => {
           </h2>
           <p className="text-[16px] text-gray-700  mt-2 mb-4">
             One-on-One Consultations with Attorney Hardam H. Tripathi, Esq.
-            Hosted by Trip Law, P.A. | Powered by Social Midas
+            Hosted by Trip Law, P.A. | Powered by Social Medias
           </p>
           <ul className="text-[16px] text-[#060B28] font-medium mt-2 space-y-3">
             <li>
@@ -21,8 +20,7 @@ const FreeImmigrationClinic = () => {
               <span>📍</span> Tampa Heights Youth Development & Community Center
             </li>
             <li>
-              <span>🕘</span> Clinic: All Day | Immigration Info Session: 5:00
-              PM EST
+              <span>🕘</span> Immigration Clinic All Day 10:00 A.m. to 10:00 A.m
             </li>
             <li>
               <span>💬</span> Facing an Immigration Issue? Get Help—For PM EST
@@ -40,7 +38,7 @@ const FreeImmigrationClinic = () => {
           <div className="w-full">
             <Link
               href="/info-form"
-              className="block block overflow-hidden text-white font-normal text-md md:text-lg bg-[#060B28] px-8 md:px-20 py-3 rounded-lg hover:bg-[#060b28d3] cursor-pointer w-full text-center"
+              className="block  overflow-hidden text-white font-normal text-md md:text-lg bg-[#060B28] px-8 md:px-20 py-3 rounded-lg hover:bg-[#060b28d3] cursor-pointer w-full text-center"
             >
               Fill Out The Form
             </Link>

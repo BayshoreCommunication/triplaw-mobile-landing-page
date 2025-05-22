@@ -72,13 +72,20 @@ const ImmigrationPartner = () => {
                 </ul>
               </div>
             </div>
-          </div>
-
-          <div className="my-5">
+            {/* <!-- Investor & Business Card --> */}
             <div>
-              <h2 className="text-xl font-semibold lg:font-bold text-[#060B28] mb-2">
-                Citizenship & Naturalization
-              </h2>
+              <div>
+                <h2 className="text-xl font-semibold lg:font-bold text-[#060B28] mb-2">
+                  Citizenship & Naturalization
+                </h2>
+              </div>
+            </div>
+            <div>
+              <div>
+                <h2 className="text-xl font-semibold lg:font-bold text-[#060B28] mb-2">
+                  Deportation Defenses
+                </h2>
+              </div>
             </div>
           </div>
 

@@ -83,7 +83,7 @@ const ImmigrationPartner = () => {
             <div>
               <div>
                 <h2 className="text-xl font-semibold lg:font-bold text-[#060B28] mb-2">
-                  Deportation Defenses
+                  Deportation Defense
                 </h2>
               </div>
             </div>

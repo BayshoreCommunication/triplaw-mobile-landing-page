@@ -16,7 +16,7 @@ export default function DatePickerInputField() {
           onChange={(date) => setSelectedDate(date)}
           dateFormat="MM/dd/yyyy"
           placeholderText="Date"
-          className="w-full outline-none bg-transparent text-gray-400 min-w-96"
+          className="w-full outline-none bg-transparent placeholder-gray-400  min-w-96"
           calendarClassName="text-gray-100 rounded-lg shadow-lg border border-gray-700 !p-4"
           popperClassName="z-50"
           weekDayClassName={() => "text-gray-400"}

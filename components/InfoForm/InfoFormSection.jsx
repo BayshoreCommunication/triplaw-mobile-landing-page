@@ -193,6 +193,7 @@ const InfoFormSection = () => {
                 className="bg-white border border-gray-300 text-lg rounded-lg focus:ring-primary focus:border-primary block w-full pl-4 py-2 placeholder-gray-400 outline-none mt-2"
                 placeholder="Enter Full Name"
                 required
+                autoComplete="off"
               />
             </div>
 
@@ -206,6 +207,7 @@ const InfoFormSection = () => {
                 className="bg-white border border-gray-300 text-lg rounded-lg focus:ring-primary focus:border-primary block w-full pl-4 py-2 placeholder-gray-400 outline-none mt-2"
                 placeholder="Enter Email Address"
                 required
+                autoComplete="off"
               />
             </div>
 
@@ -219,30 +221,29 @@ const InfoFormSection = () => {
                 className="bg-white border border-gray-300 text-lg rounded-lg focus:ring-primary focus:border-primary block w-full pl-4 py-2 placeholder-gray-400 outline-none mt-2"
                 placeholder="Enter Phone Number"
                 required
+                autoComplete="off"
               />
             </div>
 
             <div className="w-full mt-5">
               <label className="">Date of Birth</label>
-              {/* <DatePickerInputField
-                id="basicInformation.dateOfBirth"
-                name="basicInformation.dateOfBirth"
-                value={formData?.dateofBirth}
-                onChange={handleDateChange}
-                placeholder="Select birth date"
-              /> */}
+
               <DatePickerInputField />
             </div>
 
             <div className="w-full mt-5">
-              <label className="">Country of Citizenship </label>
+              <label htmlFor="countryofCitizenship">
+                Country of Citizenship
+              </label>
               <input
                 type="text"
+                // id="countryofCitizenship"
                 name="countryofCitizenship"
                 value={formData.countryofCitizenship}
                 onChange={handleChange}
                 className="bg-white border border-gray-300 text-lg rounded-lg focus:ring-primary focus:border-primary block w-full pl-4 py-2 placeholder-gray-400 outline-none mt-2"
-                placeholder="Country of Citizenship "
+                placeholder="Country of Citizenship"
+                autoComplete="new-country"
                 required
               />
             </div>
@@ -275,6 +276,7 @@ const InfoFormSection = () => {
                 className="bg-white border border-gray-300 text-lg rounded-lg focus:ring-primary focus:border-primary block w-full pl-4 py-2 placeholder-gray-400 outline-none mt-2"
                 placeholder="How long have you been in the U.S.?"
                 required
+                autoComplete="off"
               />
             </div>
 
@@ -305,6 +307,7 @@ const InfoFormSection = () => {
                 className="bg-white border border-gray-300 text-lg rounded-lg focus:ring-primary focus:border-primary block w-full pl-4 py-2 placeholder-gray-400 outline-none mt-2"
                 placeholder="If yes, please list the type(s) of applications"
                 required
+                autoComplete="off"
               />
             </div>
 
@@ -340,6 +343,7 @@ const InfoFormSection = () => {
                 className="bg-white border border-gray-300 text-lg rounded-lg focus:ring-primary focus:border-primary block w-full pl-4 py-2 placeholder-gray-400 outline-none mt-2"
                 placeholder="Briefly describe your situation or question"
                 required
+                autoComplete="off"
               />
             </div>
 

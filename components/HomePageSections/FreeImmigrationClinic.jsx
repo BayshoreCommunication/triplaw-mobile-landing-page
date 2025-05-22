@@ -10,7 +10,7 @@ const FreeImmigrationClinic = () => {
           </h2>
           <p className="text-[16px] text-gray-700  mt-2 mb-4">
             One-on-One Consultations with Attorney Hardam H. Tripathi, Esq.
-            Hosted by Trip Law, P.A. | Powered by Social Medias
+            Hosted by Trip Law, P.A.
           </p>
           <ul className="text-[16px] text-[#060B28] font-medium mt-2 space-y-3">
             <li>

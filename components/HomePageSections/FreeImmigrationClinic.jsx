@@ -33,7 +33,7 @@ const FreeImmigrationClinic = () => {
           </h2>
           <p className="text-[16px] text-gray-700  mt-2 mb-4">
             Save time by filling out the form before arriving. Uploading
-            documents is optional but highly encouraged.
+            documents is optional but highly encouraged. 
           </p>
           <div className="w-full">
             <Link
